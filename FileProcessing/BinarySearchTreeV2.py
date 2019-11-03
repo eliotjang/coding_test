@@ -31,3 +31,13 @@ class BinarySearchTree(object):
             return self._find_value(root.left, key)
         else:
             return self._find_value(root.right, key)
+
+if __name__ == '__main__':
+    array = [40, 4, 34, 45, 14, 55, 48, 13, 15, 49, 47]
+
+    bst = BinarySearchTree()
+    for x in array:
+        bst.insert(x)
+
+    print(bst.find(15))
+    print(bst.find(17))
