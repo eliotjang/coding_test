@@ -41,3 +41,5 @@ if __name__ == '__main__':
 
     print(bst.find(15))
     print(bst.find(17))
+
+#source: http://ejklike.github.io/2018/01/09/traversing-a-binary-tree-1.html
