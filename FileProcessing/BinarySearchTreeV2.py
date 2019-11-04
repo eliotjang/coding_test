@@ -27,26 +27,35 @@ class BinarySearchTree(object):
         else:
             #해당 node의 데이터가 입력받은 data보다 작다면 
             if data <= node.data:
-                #child tree인 왼쪽 트리로 가는 node
+                #child tree인 왼쪽 트리로 가는 node 인스턴스의 left변수와 해당 data를 인자로 넣는 재귀함수 호출
                 node.left = self._insert_value(node.left, data)
             else:
+                #child tree인 오른쪽 트리로 가는 node 인스턴스의 right변수와 해당 data를 인자로 넣는 재귀함수 호출
                 node.right = self._insert_value(node.right, data)
+        #node가 만들어졌다면 해당 node 인스턴스를 반환
         return node
-
+    #해당 데이터인 key와 새롭게 만든 result배열을 인자로 받아 find 메소드 생성
     def find(self, key, result):
+        #해당 데이터가 어디 있는지 찾아주는 메소드를 호출하여 반환
         return self._find_value(self.root, key, result)
-
+    #해당 node와 key 그리고 새롭게 만든 result배열을 인자로 받은 _find_value 메소드 생성
     def _find_value(self, root, key, result):
+        #root node가 없거나 root node의 data가 입력받은 data인 key와 일치한다면
         if root is None or root.data == key:
-            #return root is not None
-            print("\n해당 배열의 데이터는", root.data,"\n데이터에 해당하는 첨자는 ",end='')
+            #해당 데이터 출력
+            print("\n해당 배열의 데이터는", root.data,"\n데이터에 해당하는 배열의 첨자는 ",end='')
+            #데이터에 해당하는 배열의 첨자 출력후 반환
             return result.index(root.data)
+        #찾고자 하는 data인 key가 root node보다 작다면
         elif key < root.data:
+            #root 인스턴스의 child tree인 왼쪽으로 가는 트리인 left 변수, 해당 data인 key, 새롭게 만든 result 배열의 인자로 재귀함수 호출
             return self._find_value(root.left, key, result)
         else:
+            #root 인스턴스의 child tree인 오른쪽으로 가는 트리인 right 변수, 해당 data인 key, 새롭게 만든 result 배열의 인자로 재귀함수 호출
             return self._find_value(root.right, key, result)
-
+    #왼쪽 하위 트리를 모두 방문하고 root를 방문하고 마지막으로 오른쪽 하위 트리를 모두 방문하여 오름차순으로 정렬하는 중위순회 메소드 생성
     def in_order_traversal(self, result):
+        #
         def _in_order_traversal(root, result):
             if root is None:
                 pass
