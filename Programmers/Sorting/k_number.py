@@ -1,10 +1,14 @@
-#command = [[2, 5, 3], [4, 4, 1], [1, 7, 3]]
-#print(len(command))
+'''
+Author: Eliot Jang
+last_modified_at: 2019-11-05
+'''
 def solution(array, commands):
-    tmp = list()
+    tmp = []
     answer = []
     while len(commands) > 0:
-        tmp = [1, 5, 2, 6, 3, 7, 4]
+        tmp = []
+        for i in range(len(array)):
+            tmp.append(array[i])
         x = commands[0][0] - 1
         y = commands[0][1] - 1
         del tmp[:x]
