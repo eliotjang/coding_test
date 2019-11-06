@@ -1,14 +1,11 @@
 '''
 Author: Eliot Jang
-last_modified_at: 2019-11-05
+last_modified_at: 2019-11-07
 '''
 def solution(array, commands):
-    tmp = []
     answer = []
     while len(commands) > 0:
-        tmp = []
-        for i in range(len(array)):
-            tmp.append(array[i])
+        tmp = array.copy() #same as tmp=list(array) or timp=a[:]
         x = commands[0][0] - 1
         y = commands[0][1] - 1
         del tmp[:x]
