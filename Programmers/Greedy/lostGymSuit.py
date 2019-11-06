@@ -1,3 +1,7 @@
+"""
+Author: Eliot Jang
+Last modified: 2019-11-07
+"""
 def solution(n, lost, reserve):
     current = n - len(lost)
     for i in lost:
