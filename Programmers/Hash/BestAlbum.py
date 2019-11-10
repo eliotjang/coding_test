@@ -1,34 +1,48 @@
-import operator
+from operator import itemgetter
 
 def solution(genres, plays):
     answer = []
-    tmp1 = {}
-    tmp2 = {}
-    for i in range(len(genres)):
-        if genres[i] is "classic":
-            tmp1[i] = plays[i]
-        elif genres[i] is "pop":
-            tmp2[i] = plays[i]
-    sorted_tmp1 = sorted(tmp1.items(), key = operator.itemgetter(1), reverse = True)
-    sorted_tmp2 = sorted(tmp2.items(), key = operator.itemgetter(1), reverse = True)
-    #a = list(sorted_tmp1.values())
-    count1 = 0
-    count2 = 0
-    for z in range(len(sorted_tmp1)):
-        count1 += int(sorted_tmp1[z][1])
-    for z in range(len(sorted_tmp2)):
-        count2 += int(sorted_tmp2[z][1])
-    if count1 >= count2:
-        for x in range(2):
-            answer.append(sorted_tmp1[x][0])
-        for y in range(2):
-            answer.append(sorted_tmp2[y][0])
-    else:
-        for x in range(2):
-            answer.append(sorted_tmp2[x][0])
-        for y in range(2):
-            answer.append(sorted_tmp1[y][0])
+    d = {}
+
+    # make set according to genre.
+    for i in range(0, len(genres)) : 
+        if genres[i] not in d : 
+            d[genres[i]] = [] 
+            d[genres[i]].append(0); 
+        d[genres[i]].append( (i, plays[i]) ); 
+        d[genres[i]][0] += plays[i]; 
+    # now d is 
+    # d = { 'classic': [1450,(0, 500), (2, 150), (3, 800)],
+    # 'pop': [3100, (1, 600), (4, 2500)] }
     
+    
+    # sort set on descending order. 
+    a = list(d.values()) 
+    a.sort(key=itemgetter(0), reverse=True) 
+    
+    # now a is 
+    # a = [ [3100, (1, 600), (4, 2500)], 
+    # [1450, (0, 500), (2, 150), (3, 800)] ] 
+    
+    # pop the most played genre. 
+    # and selecte the most played two songs. 
+    while a : 
+        max = -1 
+        # remove total sum of the genre played. 
+        a[0].pop(0) 
+        
+        # sort by number played on increasing order. 
+        a[0].sort(key=itemgetter(1), reverse=True) 
+        
+        # extract top 2 songs and append to answer. 
+        for i in range(0, len(a[0])) : 
+            if (i >= 2) : 
+                break 
+            answer.append(a[0][i][0]) 
+            
+        # remove current genre from list. 
+        a.pop(0) 
+        
     return answer
 
 if __name__ == "__main__":
