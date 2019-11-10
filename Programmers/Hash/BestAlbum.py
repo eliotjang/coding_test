@@ -3,4 +3,6 @@ def solution(genres, plays):
     return answer
 
 if __name__ == "__main__":
-    pass
+    genres = ["classic", "pop", "classic", "classic", "pop"]
+    plays = [500, 600, 150, 800, 2500]
+    print(solution(genres, plays))
