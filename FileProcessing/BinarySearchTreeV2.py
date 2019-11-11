@@ -55,25 +55,35 @@ class BinarySearchTree(object):
             return self._find_value(root.right, key, result)
     #왼쪽 하위 트리를 모두 방문하고 root를 방문하고 마지막으로 오른쪽 하위 트리를 모두 방문하여 오름차순으로 정렬하는 중위순회 메소드 생성
     def in_order_traversal(self, result):
-        #
+        #중위순회 메소드 구현
         def _in_order_traversal(root, result):
+            #root node가 null값이라면
             if root is None:
+                #그대로 진행
                 pass
             else:
+                #root node가 null값이 아니라면 왼쪽 서브트리를 방문
                 _in_order_traversal(root.left,result)
+                #result 배열에 data 추가
                 result.append(root.data)
+                #배열의 첨자와 data값 출력
                 print('[',array.index(root.data),']', root.data)
+                #root node의 오른쪽 서브 트리 방문
                 _in_order_traversal(root.right,result)
+        #root node 자기 자신을 순회
         _in_order_traversal(self.root,result)
 
 if __name__ == '__main__':
+    #초기 데이터 값
     array = [15, 11, 70, 5, 13, 50, 18, 30, 1]
+    #최종 결과를 넣는 배열 초기화
     result = []
 
     print("초기 배열")
     print(array)
-
+    #이원탐색트리 메소드 호출
     bst = BinarySearchTree()
+    #데이터 값을 이원탐색트리에 삽입
     for x in array:
         bst.insert(x)
 
