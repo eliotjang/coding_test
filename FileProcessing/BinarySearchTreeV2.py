@@ -1,6 +1,6 @@
 '''
 Author: Eliot Jang(장성원)
-last_modified_at: 2019-11-04T09:25:00+09:00
+last_modified_at: 2019-11-11
 '''
 
 #인자로 받은 data를 인스턴스 data에 저장하고 left,right변수를 초기화하는 class 생성
