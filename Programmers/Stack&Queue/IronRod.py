@@ -5,14 +5,14 @@ def solution(arrangement):
     tmp = list(x)
     while tmp:
         x = tmp.pop(0)
-        if x is 'R':
+        if x == 'R':
             if count is 0:
                 pass
             else:
                 answer += count
-        elif x is '(':
+        elif x == '(':
             count += 1
-        elif x is ')':
+        elif x == ')':
             answer += 1
             count -= 1
         else:
