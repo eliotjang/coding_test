@@ -1,5 +1,21 @@
 def solution(arrangement):
     answer = 0
+    x = arrangement.replace('()', 'R')
+    count = 0
+    tmp = list(x)
+    while tmp:
+        x = tmp.pop(0)
+        if x is 'R':
+            if count is 0:
+                pass
+            else:
+                answer += count
+        elif x is '(':
+            count += 1
+        elif x is ')':
+            answer += 1
+            count -= 1
+        
     return answer
 
 if __name__ == "__main__":
