@@ -15,7 +15,8 @@ def solution(arrangement):
         elif x is ')':
             answer += 1
             count -= 1
-        
+        else:
+            break
     return answer
 
 if __name__ == "__main__":
