@@ -1,26 +1,28 @@
 def solution(prices):
-    timecount = []
-    height = 0
-    count = 0
-    time = 0
-    
-    while prices:
-        i = 0
-        x = prices.pop(0)
-        while prices[i] >= x:
-            time += 1
-            i += 1
-            if i is len(prices):
-                break
-        else:
-            pass
-        timecount.append(time)
-        time = 0
-            
-
     answer = []
+    time = 0
+    prev_y = 0
+    while prices:
+        timecount = list(prices)
+        x = prices.pop(0)
+        y = timecount.pop(0)
+        while timecount:
+            y = timecount.pop(0)
+            if x > y:
+                pass
+            elif x < y:
+                time += 1
+            elif x == y:
+                if prev_y < y:
+                    pass
+                elif prev_y > y:
+                    time += 1
+            prev_y = y
+        answer.append(time)
+        time = 0
     return answer
 
 if __name__ == "__main__":
     prices = [1, 2, 3, 2, 3]
+    #prices = [1, 2, 1, 5, 4, 3, 4, 1, 2]
     print(solution(prices))
