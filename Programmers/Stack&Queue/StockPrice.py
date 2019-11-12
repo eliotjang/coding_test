@@ -1,23 +1,21 @@
 def solution(prices):
-    timecount = [0] * len(prices)
+    timecount = []
     height = 0
     count = 0
     time = 0
-    j = 0
+    
     while prices:
+        i = 0
         x = prices.pop(0)
-        time += 1
-        if x > height:
-            timecount.insert(count, time)
-            time = 0
-        elif x <= height:
-            j = 0
-            while prices[j] >= height:
-                time += 1
-
-                j += 1
+        while prices[i] >= x:
             time += 1
-            
+            i += 1
+            if i is len(prices):
+                break
+        else:
+            pass
+        timecount.append(time)
+        time = 0
             
 
     answer = []
