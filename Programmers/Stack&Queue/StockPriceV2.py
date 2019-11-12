@@ -10,6 +10,6 @@ def solution(prices):
     return answer
 
 if __name__ == "__main__":
-    prices = [1, 2, 3, 2, 3]
-    #prices = [1, 2, 1, 5, 4, 3, 4, 1, 2]
+    #prices = [1, 2, 3, 2, 3]
+    prices = [1, 2, 1, 5, 4, 3, 4, 1, 2]
     print(solution(prices))
