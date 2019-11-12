@@ -13,10 +13,13 @@ def solution(prices):
             elif x < y:
                 time += 1
             elif x == y:
-                if prev_y < y:
-                    pass
-                elif prev_y > y:
+                if prev_y <= y:
                     time += 1
+                elif prev_y > y:
+                    if prev_y > x:
+                        time += 1
+                    else:
+                        pass
             prev_y = y
         answer.append(time)
         time = 0
