@@ -1,38 +1,34 @@
-def solution(numbers):
-    fornum = list(numbers)
-    countnum = list(numbers)
-    count = 0
-    answer = 0
-    tmp = ''
-    for idx, number in enumerate(numbers):
-        countnum = list(numbers)
-        del countnum[idx]
-        tmp = number
-        while countnum:
-            answer += find_prime(tmp)
-            if not countnum:
-                break
-            tmp += countnum[count]
-            count += 1
-        
+from itertools import permutations
 
-    return answer
+def solution(numbers):
+    total = []
+    count = 0
+    for i, x in enumerate(numbers):
+        tmp = list(set(map(''.join, permutations(numbers, i+1))))
+        for j, y in enumerate(tmp):
+            total.append(int(tmp[j]))
+
+    result = list(set(total))    
+    for j, y in enumerate(result):
+        if find_prime(result[j]):
+            count += 1
+
+    return count
 
 def find_prime(strnum):
     x = int(strnum)
     if x > 1:
         for i in range(2,x):
             if (x % i) == 0:
-                result = 1
+                result = 0
                 break
         else:
-            result = 0
+            result = 1
     else:
         result = 0
     return result
 
-
 if __name__ == "__main__":
-    numbers = "17"
-    #number = "011"
+    #numbers = "17"
+    numbers = "011"
     print(solution(numbers))
