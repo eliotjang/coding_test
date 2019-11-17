@@ -5,3 +5,4 @@ def solution(numbers):
 if __name__ == "__main__":
     numbers = "17"
     #number = "011"
+    print(solution(numbers))
