@@ -1,5 +1,5 @@
 def solution(strings, n):
-
+    
     answer = list(map(sorted, strings))
     return answer
 
