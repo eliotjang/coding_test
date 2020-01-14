@@ -1,4 +1,4 @@
-## *Algorithm*  
+# *Algorithm*  
 
 ### This repository uploaded what I learned skills.  
 
