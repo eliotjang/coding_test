@@ -1,14 +1,9 @@
 ## *Algorithm*  
 
-### This repository is that I upload what I learned.  
-
-
-
-
-
-
+### This repository uploaded what I learned skills.  
 
 
 - - -
 
-**If you want details,** [click here](https://eliotjang.github.io/)
+**If you want details, visit my blog :D**  
+[Visit Eliot's Blog](https://eliotjang.github.io/)
