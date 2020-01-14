@@ -1,18 +1,18 @@
 #include <iostream>
 #include <algorithm>
-#define ARRAYSIZE(A) sizeof(A)/sizeof((A)[0])
-// sizeof(stack) / sizeof(stack[0])
+#include <array>
 
 using namespace std;
 
-// #V1 답은 맞았으나 시간 초과.
 int main() 
 {
-    int N;
-    int stack[100000] = { 0,};
+    int N = 1;
+    array<int, 100000> stack = {0};
+    array<int, 100000> maxArray = {0};
     int type;
     int tmp;
     int index = 0;
+    int maxIndex = -1;
     int max;
 
     cin >> N;
@@ -24,23 +24,30 @@ int main()
         {
         case 1:
             cin >> tmp;
+            if (maxArray[maxIndex] <= tmp)
+            {
+                maxIndex++;
+                maxArray[maxIndex] = tmp;
+            }
             stack[index] = tmp;
             index++;
             break;
         case 2:
-            // 0으로 초기화해야 최대값 구할 때 그 값까지 구하지 않는다. 데이터 범위: 1 < x <= 10^9
             index--;
+            if (maxArray[maxIndex] == stack[index])
+            {
+                maxArray[maxIndex] = 0;
+                maxIndex--;
+            }
             stack[index] = 0;
             break;
         case 3:
-            max = *max_element(stack, stack+ARRAYSIZE(stack)-1);
-            cout << max << endl;
+            cout << maxArray[maxIndex] << endl;
             break;
         
         default:
             break;
         }
     }
-
 }
 
