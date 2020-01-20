@@ -34,12 +34,12 @@ class Solution {
            }
         }
 
-    void inOrder(Node *root) {
+    void postOrder(Node *root) {
         if (!(root->left==NULL)) {
-            this->inOrder(root->left);
+            this->postOrder(root->left);
         }
         if (!(root->right==NULL)) {
-            this->inOrder(root->right);
+            this->postOrder(root->right);
         }
         cout << root->data << ' ';
     }
@@ -62,7 +62,7 @@ int main() {
         root = myTree.insert(root, data);
     }
 
-    myTree.inOrder(root);
+    myTree.postOrder(root);
 
     return 0;
 }

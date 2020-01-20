@@ -32,13 +32,13 @@ class Solution {
            }
         }
 
-    void inOrder(Node *root) {
+    void preOrder(Node *root) {
         std::cout << root->data << ' ';
         if (!(root->left==NULL)) {
-            this->inOrder(root->left);
+            this->preOrder(root->left);
         }
         if (!(root->right==NULL)) {
-            this->inOrder(root->right);
+            this->preOrder(root->right);
         }
     }
 
@@ -60,7 +60,7 @@ int main() {
         root = myTree.insert(root, data);
     }
 
-    myTree.inOrder(root);
+    myTree.preOrder(root);
 
     return 0;
 }
