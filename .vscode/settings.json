@@ -4,6 +4,7 @@
         "ios": "cpp",
         "algorithm": "cpp",
         "stack": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "string": "cpp"
     }
 }
