@@ -5,6 +5,7 @@
         "algorithm": "cpp",
         "stack": "cpp",
         "iosfwd": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "iostream": "cpp"
     }
 }

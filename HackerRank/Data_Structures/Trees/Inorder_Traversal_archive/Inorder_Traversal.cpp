@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cstddef>
 
+using namespace std;
+
 class Node {
     public:
         int data;
@@ -33,10 +35,10 @@ class Solution {
         }
 
     void inOrder(Node *root) {
-        std::cout << root->data << ' ';
         if (!(root->left==NULL)) {
             this->inOrder(root->left);
         }
+        cout << root->data << ' ';
         if (!(root->right==NULL)) {
             this->inOrder(root->right);
         }
@@ -49,11 +51,11 @@ int main() {
     Solution myTree;
     Node* root = NULL;
 
-    std::string str_data;
+    string str_data;
     int data;
     int count = 0;
 
-    while(std::cin >> str_data) {
+    while(cin >> str_data) {
         if(str_data.compare("\\")==0 || str_data.compare("/")==0) continue;
         count++;
         data = stoi(str_data);
