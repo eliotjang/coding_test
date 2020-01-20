@@ -33,13 +33,13 @@ class Solution {
         }
 
     void postOrder(Node *root) {
-        std::cout << root->data << ' ';
         if (!(root->left==NULL)) {
             this->postOrder(root->left);
         }
         if (!(root->right==NULL)) {
             this->postOrder(root->right);
         }
+        std::cout << root->data << ' ';
     }
 
 };
