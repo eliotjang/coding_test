@@ -7,51 +7,64 @@ vector<string> split_string(string);
 /*
  * Complete the equalStacks function below.
  */
+void swap(int& a, int& b)
+{
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
 int equalStacks(vector<int> h1, vector<int> h2, vector<int> h3) {
-    int tmp1 = accumulate(h1.begin(), h1.end(), 0);
-    int tmp2 = accumulate(h2.begin(), h2.end(), 0);
-    int tmp3 = accumulate(h3.begin(), h3.end(), 0);
-    //TODO: use count for vector iter
-    int m1, m2, m3;
-    vector<int> v1,v2,v3;
-    m1 = max({tmp1, tmp2, tmp3});
-    if (m1 == tmp1) v1 = h1;
-    else if(m1 == tmp2) v1 = h2;
-    else v1 = h3;
-
-    m3 = min({tmp1, tmp2, tmp3});
-    if (m3 == tmp1) v3 = h1;
-    else if (m3 == tmp2) v3 = h2;
-    else v3 = h3;
-
-    if (m3 < tmp1 && tmp1 < m1) {m2 = tmp1;}
-    else if( m3 < tmp2 && tmp2 < m1) {m2 = tmp2;}
-    else m2 = tmp3;
-    if (m2 == tmp1) v2 = h1;
-    else if (m2 == tmp2) v2 = h2;
-    else v2 = h3;
-    
-    while( m1 != m2 && m1 != m3 ) 
-    {
-        while (m1 != m2) {
-            int top1 = v1.front();
-            v1.erase(v1.begin()+0);
-            m1 -= top1;
-            while (m1 < m2) {
-                int top2 = v2.front();
-                v2.erase(v2.begin()+0);
-                m2 -= top2;
+    int t1 = accumulate(h1.begin(), h1.end(), 0);
+    int t2 = accumulate(h2.begin(), h2.end(), 0);
+    int i1=0, i2=0, i3=0;
+    if (t1 < t2) {
+        h1.swap(h2);
+        swap(t1, t2);
+    }
+    int t3 = accumulate(h3.begin(), h3.end(), 0);
+    if (t1 > t3 && t2 > t3) {
+        // nothing works.
+    }
+    else if (t1 > t3 && t2 < t3) {
+        h2.swap(h3);
+        swap(t2,t3);
+    }
+    else if (t1 < t3 && t2 < t3) {
+        h1.swap(h3);
+        swap(t1,t3);
+    }
+    else if (t1 == t3) {
+        h2.swap(h3);
+        swap(t2,t3);
+    }
+    while (!(t1 == t2 && t2 == t3)) {
+        while(t1 > t2) {
+            t1 -= h1[i1];
+            i1++;
+        }
+        while(t2 > t3) {
+            t2 -= h2[i2];
+            i2++;
+        }
+        if (t1 < t2) {
+            t2 -= h2[i2];
+            i2++;
+        }
+        if (t1 == t2) {
+            while (t3 > t1) {
+                t3 -= h3[i3];
+                i3++;
             }
         }
-        while (m1 < m3) {
-            int top3 = v3.front();
-            v3.erase(v3.begin()+0);
-            m3 -= top3;
-        }
+        /*else if (t2 == t3) {
+            while (t1 > t2) {
+                t1 -= h1[i1];
+                i1++;
+            }
+        }*/
     }
-    return m1;
-    //int tmp1 = 0, tmp2 = 0, tmp = 0;
-
+    return t1;
 }
 
 int main()
