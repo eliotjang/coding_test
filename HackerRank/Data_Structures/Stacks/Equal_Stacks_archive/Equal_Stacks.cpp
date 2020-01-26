@@ -12,29 +12,40 @@ int equalStacks(vector<int> h1, vector<int> h2, vector<int> h3) {
     int tmp2 = accumulate(h2.begin(), h2.end(), 0);
     int tmp3 = accumulate(h3.begin(), h3.end(), 0);
     //TODO: use count for vector iter
-    
     int m1, m2, m3;
+    vector<int> v1,v2,v3;
     m1 = max({tmp1, tmp2, tmp3});
+    if (m1 == tmp1) v1 = h1;
+    else if(m1 == tmp2) v1 = h2;
+    else v1 = h3;
+
     m3 = min({tmp1, tmp2, tmp3});
+    if (m3 == tmp1) v3 = h1;
+    else if (m3 == tmp2) v3 = h2;
+    else v3 = h3;
+
     if (m3 < tmp1 && tmp1 < m1) {m2 = tmp1;}
     else if( m3 < tmp2 && tmp2 < m1) {m2 = tmp2;}
     else m2 = tmp3;
+    if (m2 == tmp1) v2 = h1;
+    else if (m2 == tmp2) v2 = h2;
+    else v2 = h3;
     
     while( m1 != m2 && m1 != m3 ) 
     {
         while (m1 != m2) {
-            int top1 = h1.front();
-            h1.erase(h1.begin()+0);
+            int top1 = v1.front();
+            v1.erase(v1.begin()+0);
             m1 -= top1;
             while (m1 < m2) {
-                int top2 = h2.front();
-                h2.erase(h2.begin()+0);
+                int top2 = v2.front();
+                v2.erase(v2.begin()+0);
                 m2 -= top2;
             }
         }
         while (m1 < m3) {
-            int top3 = h3.front();
-            h3.erase(h3.begin()+0);
+            int top3 = v3.front();
+            v3.erase(v3.begin()+0);
             m3 -= top3;
         }
     }
