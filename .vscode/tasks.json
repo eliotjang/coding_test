@@ -8,6 +8,7 @@
             "label": "g++",
             "command": "g++",
             "args": [
+                "-std=c++1y",
                 "-g",
                 "${file}",
                 "-o",
