@@ -4,9 +4,6 @@ using namespace std;
 
 vector<string> split_string(string);
 
-/*
- * Complete the equalStacks function below.
- */
 void swap(int& a, int& b)
 {
     int temp = a;
@@ -57,21 +54,16 @@ int equalStacks(vector<int> h1, vector<int> h2, vector<int> h3) {
                 i3++;
             }
         }
-        /*else if (t2 == t3) {
-            while (t1 > t2) {
-                t1 -= h1[i1];
-                i1++;
-            }
-        }*/
     }
     return t1;
 }
 
 int main()
 {
-    //ofstream fout(getenv("OUTPUT_PATH"));
-    string name = "/Users/eliotjang/Desktop/Algorithm/HackerRank/Data_Structures/Equal_Stacks_archive/sample_output.txt";
-    ofstream fout(name);
+    ofstream fout(getenv("OUTPUT_PATH"));
+    // For Mac Preferences
+    //string name = "/Users/eliotjang/Desktop/Algorithm/HackerRank/Data_Structures/Equal_Stacks_archive/sample_output.txt";
+    //ofstream fout(name);
 
     string n1N2N3_temp;
     getline(cin, n1N2N3_temp);
