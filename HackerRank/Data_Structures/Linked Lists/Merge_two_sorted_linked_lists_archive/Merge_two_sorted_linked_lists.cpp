@@ -58,64 +58,41 @@ void free_singly_linked_list(SinglyLinkedListNode* node) {
 }
 
 // Complete the mergeLists function below.
-
-/*
- * For your reference:
- *
- * SinglyLinkedListNode {
- *     int data;
- *     SinglyLinkedListNode* next;
- * };
- *
- */
 SinglyLinkedListNode* mergeLists(SinglyLinkedListNode* head1, SinglyLinkedListNode* head2) {
-    //SinglyLinkedListNode *result;
-    int count = 1;
-    int first_node;
-    if(head1->data <= head2->data) {
-        first_node = head1->data;
-        head1 = head1->next;
-    }
-    else{
-        first_node = head2->data;
-        head2 = head2->next;
-    }
-    SinglyLinkedListNode *result = new SinglyLinkedListNode(first_node);
+    SinglyLinkedList* result = new SinglyLinkedList();
     while (head1 || head2) {
-        if (head1->data <= head2->data) {
-            SinglyLinkedListNode *ll;
-            for (int i=0; i<count; i++) {
-                ll = result->next;
+        if (!(head1)) {
+            while (head2) {
+                result->insert_node(head2->data);
+                head2 = head2->next;
             }
-            
-            ll = new SinglyLinkedListNode(head1->data);
-            //ll->data = head1->data;
-            head1 = head1->next;
-            for (int i=0; i<count; i++) {
-                result->next = ll;
-            }
-            count++;
+            break;
         }
-        else
-        {
-            SinglyLinkedListNode *ll;
-            for (int i=0; i<count; i++) {
-                ll = result->next;
+        else if (!(head2)) {
+            while (head1) {
+                result->insert_node(head1->data);
+                head1 = head1->next;
             }
-            count++;
-            ll->data = head2->data;
+            break;
+        }
+        else if (head1->data <= head2->data) {
+            result->insert_node(head1->data);
+            head1 = head1->next;
+        }
+        else { //head1->data > head2->data
+            result->insert_node(head2->data);
             head2 = head2->next;
         }
-        
     }
+    return result->head;
 }
 
 int main()
 {
-    // For Mac Preferences
-    string name = "/Users/eliotjang/Desktop/Algorithm/HackerRank/Data_Structures/Merge_two_sorted_linked_lists_archive/sample_output.txt";
-    ofstream fout(name);
-    //ofstream fout(getenv("OUTPUT_PATH"));
+    // For myMac Preferences
+    //string name = "/Users/eliotjang/Desktop/Algorithm/HackerRank/Data_Structures/Linked Lists/Merge_two_sorted_linked_lists_archive/sample_output.txt";
+    //ofstream fout(name);
+    ofstream fout(getenv("OUTPUT_PATH"));
 
     int tests;
     cin >> tests;
