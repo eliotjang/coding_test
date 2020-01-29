@@ -69,50 +69,45 @@ void free_singly_linked_list(SinglyLinkedListNode* node) {
  *
  */
 SinglyLinkedListNode* mergeLists(SinglyLinkedListNode* head1, SinglyLinkedListNode* head2) {
-    array<int, 1000> arr = {0};
-    int i = 0;
-    SinglyLinkedListNode* result;
-
-    SinglyLinkedListNode* tmp1;
-    SinglyLinkedListNode* tmp2;
-    
-    tmp1 = head1;
-    tmp2 = head2;
-
-    while (tmp1 || tmp2) {
-        if (tmp1->data <= tmp2->data) {
-            arr[i] = tmp1->data;
-            i++;
+    //SinglyLinkedListNode *result;
+    int count = 1;
+    int first_node;
+    if(head1->data <= head2->data) {
+        first_node = head1->data;
+        head1 = head1->next;
+    }
+    else{
+        first_node = head2->data;
+        head2 = head2->next;
+    }
+    SinglyLinkedListNode *result = new SinglyLinkedListNode(first_node);
+    while (head1 || head2) {
+        if (head1->data <= head2->data) {
+            SinglyLinkedListNode *ll;
+            for (int i=0; i<count; i++) {
+                ll = result->next;
+            }
             
-            tmp1 = tmp1->next;
-            if(!(tmp1)) break;
+            ll = new SinglyLinkedListNode(head1->data);
+            //ll->data = head1->data;
+            head1 = head1->next;
+            for (int i=0; i<count; i++) {
+                result->next = ll;
+            }
+            count++;
         }
-        else { // tmp1->data > tmp2->data
-            arr[i] = tmp2->data;
-            i++;
-            
-            tmp2 = tmp2->next;
-            if(!(tmp2)) break;
+        else
+        {
+            SinglyLinkedListNode *ll;
+            for (int i=0; i<count; i++) {
+                ll = result->next;
+            }
+            count++;
+            ll->data = head2->data;
+            head2 = head2->next;
         }
+        
     }
-    while (tmp2) {
-        arr[i] = tmp2->data;
-        i++;
-        tmp2 = tmp2->next;
-    }
-    while (tmp1) {
-        arr[i] = tmp1->data;
-        i++;
-        tmp1 = tmp1->next;
-    }
-    //arr[0] = result->data;
-    //result->data = arr[0];
-    for (int c = 1; c < i-1; c++) {
-        SinglyLinkedListNode *what;
-        what->data = arr[c];
-        result->next = what;
-    }
-    return result;
 }
 
 int main()
