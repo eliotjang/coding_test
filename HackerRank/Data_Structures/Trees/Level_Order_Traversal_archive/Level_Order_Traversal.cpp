@@ -47,40 +47,33 @@ class Node {
 */
 
     void levelOrder(Node * root) {
-        static int level = 0;
-        static int compare = 0;
-        while (root->left || root->right)
+        static queue<int> q;
+        if (q.empty()) {
+            q.push(root->data);
+        }
+        while (!(q.empty()))
         {
-            cout << root->data << " ";
-            if (level == compare) {
-                if (root->left && root->right) {
-                    Solution tmp;
-                    level++;
-                    tmp.levelOrder(root->left);
-                    tmp.levelOrder(root->right);
-                    compare++;
-                }
-                else if (root->left) {
-                    level++;
-                    compare++;
-                    this->levelOrder(root->left);               
-                }
-                else {
-                    level++;
-                    compare++;
-                    this->levelOrder(root->right);
-                }
+            if(root->left) {
+                q.push(root->left->data);
             }
-            else {
-                level--;
-                return;
+            if(root->right) {
+                q.push(root->right->data);
             }
-            if (level < compare) {
+
+            //If circulation root->left and root->left, level error.
+            if (root->left && root->right) {
                 this->levelOrder(root->left);
                 this->levelOrder(root->right);
             }
+            else if(root->left)
+                this->levelOrder(root->left);
+            else if (root->right)// root->right
+                this->levelOrder(root->right);
+
+            cout << q.front() << " ";
+            q.pop(); 
+            break;
         }
-        
     }
 
 }; //End of Solution
