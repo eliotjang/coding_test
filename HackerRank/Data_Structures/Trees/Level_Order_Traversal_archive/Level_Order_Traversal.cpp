@@ -45,31 +45,39 @@ class Node {
         }
 };
 */
-    public: int flag = 1;
+
     void levelOrder(Node * root) {
-        if (flag) {
+        static int level = 0;
+        static int compare = 0;
+        while (root->left || root->right)
+        {
             cout << root->data << " ";
-        }
-        flag = 1;
-        if (root->left && root->right) {
-            //if(root->left->data <= root->right->data) {
-            cout << root->left->data << " ";
-                //this->levelOrder(root->left);
-            //}
-            cout << root->right->data << " ";
-            flag = 0;
-               //this->levelOrder(root->right);
-            this->levelOrder(root->left);
-            this->levelOrder(root->right);
-        }
-        if (!(root->left)) {
-            if(root->right) {
-                this->levelOrder(root->right);
+            if (level == compare) {
+                if (root->left && root->right) {
+                    Solution tmp;
+                    level++;
+                    tmp.levelOrder(root->left);
+                    tmp.levelOrder(root->right);
+                    compare++;
+                }
+                else if (root->left) {
+                    level++;
+                    compare++;
+                    this->levelOrder(root->left);               
+                }
+                else {
+                    level++;
+                    compare++;
+                    this->levelOrder(root->right);
+                }
             }
-        }
-        else if (!(root->right)) {
-            if(root->left) {
+            else {
+                level--;
+                return;
+            }
+            if (level < compare) {
                 this->levelOrder(root->left);
+                this->levelOrder(root->right);
             }
         }
         
