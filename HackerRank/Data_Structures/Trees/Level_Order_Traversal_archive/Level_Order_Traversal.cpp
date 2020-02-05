@@ -48,32 +48,24 @@ class Node {
 
     void levelOrder(Node * root) {
         static queue<int> q;
-        if (q.empty()) {
-            q.push(root->data);
-        }
-        while (!(q.empty()))
+        while (root->left || root->right)
         {
-            if(root->left) {
+            if (q.empty()) {
+                q.push(root->data);
+            }
+            if (root->left) {
                 q.push(root->left->data);
             }
-            if(root->right) {
+            if (root->right) {
                 q.push(root->right->data);
             }
-
-            //If circulation root->left and root->left, level error.
-            if (root->left && root->right) {
+            if (root->left)
                 this->levelOrder(root->left);
+            if (root->right)
                 this->levelOrder(root->right);
-            }
-            else if(root->left)
-                this->levelOrder(root->left);
-            else if (root->right)// root->right
-                this->levelOrder(root->right);
-
-            cout << q.front() << " ";
-            q.pop(); 
-            break;
         }
+        cout << q.front() << " ";
+        q.pop();
     }
 
 }; //End of Solution
