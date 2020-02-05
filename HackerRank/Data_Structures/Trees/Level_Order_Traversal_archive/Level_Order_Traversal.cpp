@@ -50,19 +50,29 @@ class Node {
         static queue<int> q;
         while (root->left || root->right)
         {
-            if (q.empty()) {
+            if(!(root->left) && root->right) {
                 q.push(root->data);
+                root = root->right;
+                continue;
             }
-            if (root->left) {
-                q.push(root->left->data);
+            if(!(root->right) && root->left) {
+                q.push(root->data);
+                root = root->left;
+                continue;
             }
-            if (root->right) {
-                q.push(root->right->data);
+
+            if(root->right && root->left) {
+                Node *tmp1 = root->left;
+                Node *tmp2 = root->right;
+                while (tmp1 || tmp2)
+                {
+                    if(tmp1) {
+                        
+                    }
+                }
+                
             }
-            if (root->left)
-                this->levelOrder(root->left);
-            if (root->right)
-                this->levelOrder(root->right);
+
         }
         cout << q.front() << " ";
         q.pop();
