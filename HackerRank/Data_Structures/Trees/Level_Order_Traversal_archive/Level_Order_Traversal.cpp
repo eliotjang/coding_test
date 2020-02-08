@@ -47,35 +47,8 @@ class Node {
 */
 
     void levelOrder(Node * root) {
-        static queue<int> q;
-        while (root->left || root->right)
-        {
-            if(!(root->left) && root->right) {
-                q.push(root->data);
-                root = root->right;
-                continue;
-            }
-            if(!(root->right) && root->left) {
-                q.push(root->data);
-                root = root->left;
-                continue;
-            }
-
-            if(root->right && root->left) {
-                Node *tmp1 = root->left;
-                Node *tmp2 = root->right;
-                while (tmp1 || tmp2)
-                {
-                    if(tmp1) {
-                        
-                    }
-                }
-                
-            }
-
-        }
-        cout << q.front() << " ";
-        q.pop();
+        //TODO: write some codes.
+        queue<int> q;
     }
 
 }; //End of Solution
