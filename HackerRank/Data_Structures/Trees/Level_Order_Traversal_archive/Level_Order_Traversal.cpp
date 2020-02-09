@@ -49,6 +49,7 @@ class Node {
     void levelOrder(Node * root) {
         //TODO: write some codes.
         queue<int> q;
+        q.push(10);
     }
 
 }; //End of Solution
