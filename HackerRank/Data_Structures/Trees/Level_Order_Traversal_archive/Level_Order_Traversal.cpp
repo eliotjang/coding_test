@@ -50,6 +50,7 @@ class Node {
         //TODO: write some codes.
         queue<int> q;
         q.push(10);
+        q.pop(10); 
     }
 
 }; //End of Solution
