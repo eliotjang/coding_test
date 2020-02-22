@@ -51,6 +51,8 @@ class Node {
         queue<int> q;
         q.push(10);
         q.push(10);
+        q.push(10);
+        q.push(10);
         //q.pop(10);
         int a = 0; 
     }
