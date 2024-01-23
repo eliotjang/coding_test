@@ -1,10 +1,6 @@
-# *Algorithm*  
-
-### This repository uploaded what I learned skills.  
+# Prepare Coding Test
 
 
-
-**If you want details, visit my blog :D**  
 
 - - -
 
