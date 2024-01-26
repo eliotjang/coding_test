@@ -1,9 +1,15 @@
+# 확장자가 없는 binary file(실행파일) 무시
+# Ignore all
+*
+# UnIngore all with extensions
+!*.*
+# Unignore all dirs
+!*/
+
+
 .vscode/
-.out
 .yml
-./dSYM/
-.dSYM/
-.out
+*.dSYM/
 .exe
 
 input.txt
