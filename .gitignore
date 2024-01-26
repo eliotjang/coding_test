@@ -10,7 +10,7 @@
 .vscode/
 .yml
 *.dSYM/
-.exe
+*.exe
 
 input.txt
 
