@@ -1,7 +1,8 @@
 .vscode/
 .out
 .yml
-.dSYM
+./dSYM/
+.dSYM/
 .out
 .exe
 
