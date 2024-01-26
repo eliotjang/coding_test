@@ -1,7 +1,10 @@
-# Prepare Coding Test
+# 코딩 테스트 준비
 
-
+## 백준 단계별 문제 풀이(완)
+ - 입출력과 사칙연산 (13문제)
+ - 조건문 (7문제)
+ - 반복문 (12문제)
 
 - - -
-
-[Eliot's Blog](https://eliotjang.github.io/)
+## 공부 내용 정리(노션)  
+[백준 단계별 문제풀이 내용 정리](https://eliotjang.notion.site/d1b78c20eb764b689969086c4eb30122?pvs=4)
