@@ -3,6 +3,7 @@
 .yml
 .dSYM
 .out
+.exe
 
 input.txt
 
