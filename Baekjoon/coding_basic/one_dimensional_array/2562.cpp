@@ -26,6 +26,13 @@ using namespace std;
 //vector 컨테이너 사용
 int main()
 {
-    //freopen("input.txt","r",stdin);
+    // freopen("input.txt","r",stdin);
+    vector<int> vt(9,0);
+    for (int i=0; i<9; i++) {
+        cin >> vt[i];
+    }
+    int max = *max_element(vt.begin(), vt.end());
+    int max_idx = max_element(vt.begin(), vt.end()) - vt.begin();
+    cout << max << '\n' << max_idx + 1 << endl;
     return 0;
 }
