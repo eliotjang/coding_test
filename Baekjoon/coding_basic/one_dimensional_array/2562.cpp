@@ -4,7 +4,7 @@
 using namespace std;
 
 // 포인터 사용
-/* int main()
+int main_2()
 {
     // freopen("input.txt","r",stdin);
     int tmp = 0;
@@ -21,7 +21,7 @@ using namespace std;
 
     delete[] pArr;
     return 0;
-} */
+}
 
 //vector 컨테이너 사용
 int main()

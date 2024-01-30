@@ -4,7 +4,7 @@
 using namespace std;
 
 // 포인터 사용
-/* int ctn_v(int* pArr, int& n, int& v)
+int ctn_v(int* pArr, int& n, int& v)
 {
     int count = 0;
     for (int i=0; i<n; i++) {
@@ -13,7 +13,7 @@ using namespace std;
     return count;
 }
 
-int main()
+int main_2()
 {
     //freopen("input.txt", "r", stdin);
     int n, tmp, v;
@@ -27,7 +27,7 @@ int main()
     cout << ctn_v(pArr, n, v) << endl;
     delete[] pArr;
     return 0;
-} */
+}
 
 // vector 컨테이너 사용
 int main()

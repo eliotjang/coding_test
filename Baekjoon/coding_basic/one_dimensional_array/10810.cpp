@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+// 포인터 사용
 int main()
 {
     freopen("input.txt","r",stdin);

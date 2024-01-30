@@ -4,7 +4,7 @@
 using namespace std;
 
 // 포인터 사용
-/* int main()
+int main_2()
 {
     // freopen("input.txt", "r", stdin);
     int n, m, i, j;
@@ -25,9 +25,9 @@ using namespace std;
 
     delete[] basket;
     return 0;
-} */
+}
 
-// 벡터 사용
+// Vector 컨테이너 사용
 int main()
 {
     // freopen("input.txt","r",stdin);

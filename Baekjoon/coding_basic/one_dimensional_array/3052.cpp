@@ -6,7 +6,7 @@
 using namespace std;
 
 // Vector 컨테이너의 unique(), erase() 사용
-/* int main()
+int main_3()
 {
     //freopen("input.txt","r",stdin);
     int v = 0;
@@ -21,10 +21,10 @@ using namespace std;
     vt.erase(u_it, vt.end());
     cout << vt.size() << endl;
     return 0;
-} */
+}
 
 // Set 컨테이너의 중복 원소가 불가한 특징을 이용
-/* int main()
+int main_2()
 {
     freopen("input.txt","r",stdin);
     int v = 0;
@@ -38,7 +38,7 @@ using namespace std;
         cout << element << ' ';
     cout << endl << s.size() << endl;
     return 0;
-} */
+}
 
 // 다중 for문으로 중복 원소 확인
 int main()

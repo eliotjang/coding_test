@@ -3,6 +3,7 @@
 #include <algorithm>
 using namespace std;
 
+// Vector 컨테이너 사용
 int main()
 {
 	//freopen("input.txt", "r", stdin);

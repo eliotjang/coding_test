@@ -4,7 +4,7 @@
 using namespace std;
 
 // 단순 구현
-/* int main()
+int main()
 {
     //freopen("input.txt","r",stdin);
     int n, x;
@@ -17,9 +17,9 @@ using namespace std;
         }
     }
     return 0;
-} */
+}
 
-// vector 사용
+// Vector 컨테이너 사용
 int main()
 {
     //freopen("input.txt","r",stdin);
