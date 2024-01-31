@@ -5,9 +5,11 @@
 <details>
 <summary>스크린샷</summary>
 <div markdown="1">
-![스크린샷](Baekjoon/image/BOJ_coding_basic_solved.png)
+<img src="Baekjoon/image/BOJ_coding_basic_solved.png" width="700" height="400"/>
 </div>
 </details>
+
+![스크린샷](Baekjoon/image/BOJ_coding_basic_solved2.png)
 
  - [입출력과 사칙연산 (13문제)](Baekjoon/coding_basic/iostream_and_arithmetic)
  - [조건문 (7문제)](Baekjoon/coding_basic/conditional_statement)
