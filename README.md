@@ -7,6 +7,7 @@
  - [1차원 배열 (10문제)](Baekjoon/coding_basic/one_dimensional_array)
    - 기본 내장 배열(포인터)과 Vector 컨테이너 두 가지를 사용하여 구현
  - [문자열 (11문제)](Baekjoon/coding_basic/string)
+ - [심화]
 - - -
 ## 공부 내용 정리(노션)  
 [백준 단계별 문제 내용 정리](https://eliotjang.notion.site/d1b78c20eb764b689969086c4eb30122?pvs=4)
