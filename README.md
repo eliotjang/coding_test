@@ -2,11 +2,11 @@
 
 ## 백준 단계별 문제 풀이(완)
 
-<img src="Baekjoon/image/BOJ_coding_basic_solved.png" width="50" height="50"/>
+<img src="Baekjoon/image/BOJ_coding_basic_solved.png" width="300" height="200"/>
 
-<img src="https://github.com/eliotjang/coding_test/blob/master/Baekjoon/image/BOJ_coding_basic_solved.png" width="50" height="50"/>
+<img src="https://github.com/eliotjang/coding_test/blob/master/Baekjoon/image/BOJ_coding_basic_solved.png" width="400" height="300"/>
 
-![스크린샷](Baekjoon/image/BOJ_coding_basic_solved.png){: width="50" height="50"}
+![스크린샷](Baekjoon/image/BOJ_coding_basic_solved.png){: width="50%" height="50%"}
 
  - [입출력과 사칙연산 (13문제)](Baekjoon/coding_basic/iostream_and_arithmetic)
  - [조건문 (7문제)](Baekjoon/coding_basic/conditional_statement)
