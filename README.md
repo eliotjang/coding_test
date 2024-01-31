@@ -4,6 +4,14 @@
 
 ![스크린샷](Baekjoon/image/BOJ_coding_basic_solved.png)
 
+![스크린샷](Baekjoon/image/BOJ_coding_basic_solved2.png)
+
+![스크린샷](Baekjoon/image/BOJ_coding_basic_solved3.png)
+
+![스크린샷](Baekjoon/image/BOJ_coding_basic_solved4.png)
+
+![스크린샷](Baekjoon/image/BOJ_coding_basic_solved5.png)
+
  - [입출력과 사칙연산 (13문제)](Baekjoon/coding_basic/iostream_and_arithmetic)
  - [조건문 (7문제)](Baekjoon/coding_basic/conditional_statement)
  - [반복문 (12문제)](Baekjoon/coding_basic/loop_statement)
