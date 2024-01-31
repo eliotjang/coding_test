@@ -2,10 +2,6 @@
 
 ## 백준 단계별 문제 풀이(완)
 
-![스크린샷](Baekjoon/image/BOJ_coding_basic_solved.png)
-
-![스크린샷](Baekjoon/image/BOJ_coding_basic_solved2.png)
-
 ![스크린샷](Baekjoon/image/BOJ_coding_basic_solved3.png)
 
 ![스크린샷](Baekjoon/image/BOJ_coding_basic_solved4.png)
