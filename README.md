@@ -4,7 +4,7 @@
 
 ![스크린샷](Baekjoon/image/BOJ_coding_basic_solved.png)
 
-[백준 링크](https://www.acmicpc.net/step)]
+[[백준 링크](https://www.acmicpc.net/step)]
 
  - [입출력과 사칙연산 (13문제)](Baekjoon/coding_basic/iostream_and_arithmetic)
  - [조건문 (7문제)](Baekjoon/coding_basic/conditional_statement)
