@@ -10,12 +10,12 @@ int main()
         string s;
         getline(cin, s);
         for (int j=0; j<s.size(); j++) {
-            vt[i][0] = s[j];
+            vt[i].push_back(s[j]);
         }
     }
     for (int i=0; i<5; i++) {
         for (int j=0; j<5; j++) {
-            cout << vt[i][j] << ' ';
+            cout << vt[j][i];
         }
         cout << endl;
     }
