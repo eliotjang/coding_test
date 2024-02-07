@@ -3,15 +3,27 @@ using namespace std;
 
 int main()
 {
-    freopen("input.txt","r",stdin);
-    /*
-    2차원 배열 선언 후 0으로 초기화
-    좌표 입력받아서 해당 정사각형만큼 1로 변경
-    다음 좌표 입력받고 변경과정에 이미 1이 있으면
-    시작과 끝을 찾아 x, y를 곱해 sum에 더함
-    
-    그런데 만약 색종이가 3개가 겹칠 경우는 이런식으로 할수없음
-    왜냐하면 겹친 부분이 직사각형이 아닌 다각형일 수 있기 때문
-    */
+    // freopen("input.txt","r",stdin);
+    int arr[100][100] = { 0, };
+    int n;
+    cin >> n;
+    for (int i=0; i<n; i++) {
+        int x, y;
+        cin >> x >> y;
+        for (int j=x; j<x+10; j++) {
+            for (int k=y; k<y+10; k++) {
+                arr[j][k] = 1;
+            }
+        }
+    }
+    int sum = 0;
+    for (int i=0; i<100; i++) {
+        for (int j=0; j<100; j++) {
+            if (arr[i][j] > 0) {
+                sum++;
+            }
+        }
+    }
+    cout << sum;
     return 0;
 }
