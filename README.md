@@ -2,7 +2,6 @@
 
 ## 백준 단계별 문제 풀이(완)
 
-![스크린샷](Baekjoon/image/BOJ_coding_basic_solved.png)
 ![스크린샷](Baekjoon/image/BOJ_coding_basic_solved_2.png)
 
 [[백준 링크](https://www.acmicpc.net/step)]
