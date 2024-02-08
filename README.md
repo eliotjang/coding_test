@@ -15,6 +15,9 @@
  - [문자열 (11문제)](Baekjoon/coding_basic/string)
  - [심화 1(8문제)](Baekjoon/coding_basic/deepening_1)
  - [2차원 배열(4문제)](Baekjoon/coding_basic/two_dimensional_array)
+
+## 백준 알고리즘 기초
+
 - - -
 ## 공부 내용 정리(노션)  
 [백준 단계별 문제 내용 정리](https://eliotjang.notion.site/d1b78c20eb764b689969086c4eb30122?pvs=4)
