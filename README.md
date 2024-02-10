@@ -17,7 +17,7 @@
  - [2차원 배열(4문제)](Baekjoon/coding_basic/two_dimensional_array)
 
 ## 백준 알고리즘 기초 1/2
-
+ - [스택]()
 
 - - -
 ## 공부 내용 정리(노션)  
