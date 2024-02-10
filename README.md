@@ -5,8 +5,8 @@
 ![스크린샷](Baekjoon/image/BOJ_coding_basic_solved_2.png)
 
 [[백준 링크](https://www.acmicpc.net/step)]
-- - -
-[문제 풀이 코드]
+
+[소스코드]
  - [입출력과 사칙연산 (13문제)](Baekjoon/coding_basic/iostream_and_arithmetic)
  - [조건문 (7문제)](Baekjoon/coding_basic/conditional_statement)
  - [반복문 (12문제)](Baekjoon/coding_basic/loop_statement)
@@ -17,6 +17,8 @@
  - [2차원 배열(4문제)](Baekjoon/coding_basic/two_dimensional_array)
 
 ## 백준 알고리즘 기초 1/2
+
+[소스코드]
  - [스택]()
 
 - - -
