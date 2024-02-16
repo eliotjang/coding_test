@@ -23,5 +23,5 @@
 
 - - -
 ## 공부 내용 정리(노션)  
-[백준 단계별 문제 내용 정리](https://eliotjang.notion.site/d1b78c20eb764b689969086c4eb30122?pvs=4)
+[백준 단계별 문제 내용 정리](https://eliotjang.notion.site/d1b78c20eb764b689969086c4eb30122?pvs=4)  
 [백준 알고리즘 기초1](https://eliotjang.notion.site/1-3ff256c3312e4939a397049d8c615720?pvs=4)
