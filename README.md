@@ -22,7 +22,8 @@
 소스코드
  - [스택](Baekjoon/stack)
  - [큐](Baekjoon/queue)
-
+ - [덱]
+ 
 - - -
 ## 공부 내용 정리(노션)  
 [백준 단계별 문제 내용 정리](https://eliotjang.notion.site/d1b78c20eb764b689969086c4eb30122?pvs=4)
