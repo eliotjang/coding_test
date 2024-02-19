@@ -34,7 +34,6 @@ struct Queue {
                 flag++;
                 tmp--;
             } else continue;
-            // to be continue...
             // 0이면 넘기고 아니면 K번 넘기고 거기있는 값 출력
         }
     }
