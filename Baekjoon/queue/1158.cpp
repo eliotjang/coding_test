@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    freopen("input.txt","r",stdin);
+    // freopen("input.txt","r",stdin);
     int N, K;
     scanf("%d %d", &N, &K);
     queue<int> q;
@@ -12,10 +12,14 @@ int main()
         q.push(i+1);
     }
     printf("<");
-    for(int i=0; i<N; i++) {
-        for(int j=0; j<K; j++) {
-            //push and pop
+    for(int i=0; i<N-1; i++) {
+        for(int j=0; j<K-1; j++) {
+            q.push(q.front());
+            q.pop();
         }
+        printf("%d, ",q.front());
+        q.pop();
     }
+    printf("%d>", q.front());
     return 0;
 }
