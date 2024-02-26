@@ -5,7 +5,7 @@ using namespace std;
 long long GCD(long long a, long long b)
 {
     while (b != 0) {
-        int r = a%b;
+        long long r = a%b;
         a = b;
         b = r;
     }
@@ -14,7 +14,7 @@ long long GCD(long long a, long long b)
 
 int main()
 {
-    freopen("input.txt","r",stdin);
+    // freopen("input.txt","r",stdin);
     int n;
     long long s, tmp;
     long long result = 0;
@@ -23,7 +23,7 @@ int main()
     for (int i=0; i<n; i++) {
         cin >> tmp;
         tmp -= s;
-        A[abs(tmp)];
+        A[i] = abs(tmp);
     }
     result = A[0];
     for (int i=1; i<A.size(); i++) {
