@@ -20,9 +20,10 @@
 ### 백준 알고리즘 기초 1/2
 
 소스코드
- - [스택](Baekjoon/stack)
- - [큐](Baekjoon/queue)
- - [덱]
+ - [스택 (9문제)](Baekjoon/stack)
+ - [큐 (2문제)](Baekjoon/queue)
+ - [덱 (1문제)](Baekjoon/deque)
+ - [수학1 (14문제)](Baekjoon/math1)
  
 - - -
 ## 공부 내용 정리(노션)  
