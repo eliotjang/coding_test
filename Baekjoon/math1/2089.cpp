@@ -1,13 +1,25 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-    int N;
+    // freopen("input.txt","r",stdin);
+    string result;
+    long long N;
     cin >> N;
-    // 2의 보수로 바꾸는 방법을 사용
-    // 0과 1을 바꾸고나서 1을 더하는 방법
+    while ( N != 0) {
+        if ( N % -2 == 0) {
+            result += '0';
+            N = N / -2;
+        } else {
+            result += '1';
+            N = (N-1) / -2;
+        }
+    }
+    reverse(result.begin(), result.end());
+    cout << result << endl;
     return 0;
 }
