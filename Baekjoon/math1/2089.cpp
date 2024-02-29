@@ -8,10 +8,14 @@ int main()
     cin.tie(nullptr);
     // freopen("input.txt","r",stdin);
     string result;
-    long long N;
+    int N;
     cin >> N;
+    if (N == 0) {
+        cout << '0' << endl;
+        return 0;
+    }
     while ( N != 0) {
-        if ( N % -2 == 0) {
+        if (N % -2 == 0) {
             result += '0';
             N = N / -2;
         } else {
