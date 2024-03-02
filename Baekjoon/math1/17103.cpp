@@ -1,21 +1,20 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-    freopen("input.txt","r",stdin);
+    // freopen("input.txt","r",stdin);
 
-    const int max = 1000000;
+    const int max = 1000001;
     int T;
-    vector<int> v;
-    bool check[max+1];
-    for (int i=2; i<=max; i++) {
+    bool prime[max] = {false};
+    bool check[max] = {false};
+    for (int i=2; i<max; i++) {
         if (check[i] == false) {
-            v.push_back(i);
-            for (int j=i+i; j<=max; j+=i) {
+            prime[i] = true;            
+            for (int j=i+i; j<max; j+=i) {
                 check[j] = true;
             }
         }
@@ -24,17 +23,13 @@ int main()
     while(T--) {
         int N, count = 0;
         cin >> N;
-        for (int i=0; i<v.size(); i++) {
-            for (int j=i; j<v.size(); j++) {
-                if (N == v[i] + v[j]) {
-                    count++;
-                    continue;
-                }
+        for (int i=2; i<N/2+1; i++) {
+            if (prime[i] == true && prime[N-i] == true) {
+                // cout << i << " + " << N-i << " = " << N << endl;
+                count++;
             }
         }
-        if ( count != 0) {
-            cout << count << '\n';
-        }
+        cout << count << '\n';
     }
     /* for (const auto& E : v) {
         cout << E << '\n';
