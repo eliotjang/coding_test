@@ -6,11 +6,11 @@ int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-    freopen("input.txt","r",stdin);
+    // freopen("input.txt","r",stdin);
     
-    const int max = 100001L;
+    const int max = 100001;
     const long long mod = 1000000009LL;
-    vector<vector <long long>> D(max, vector<int>(4));
+    vector<vector <long long>> D(max, vector<long long>(4));
     
     for (int i=1; i<max; i++) {
         if (i-1 >= 0) {
