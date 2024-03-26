@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 #include <vector>
 using namespace std;
 
@@ -24,7 +25,7 @@ int main()
             }
         }
     }
-    cout << D[N-1] << endl;
+    cout << *max_element(D.begin(), D.end()) << endl;
 
     return 0;
 }
