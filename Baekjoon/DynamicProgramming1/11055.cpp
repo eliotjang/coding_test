@@ -15,8 +15,7 @@ int main()
         cin >> A[i];
     }
     vector<int> D(N);
-    // D[i] = max(D[j]) + 1
-    //  j < i, A[j] < A[i]
+
     for (int i=0; i<N; i++) {
         D[i] = 1;
         for (int j=0; j<i; j++) {
