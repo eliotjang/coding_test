@@ -15,7 +15,7 @@ int main()
         cin >> A[i];
     }
     vector<int> D(N);
-
+    // 가장 긴 증가하는 부분수열4
     for (int i=0; i<N; i++) {
         D[i] = 1;
         for (int j=0; j<i; j++) {
