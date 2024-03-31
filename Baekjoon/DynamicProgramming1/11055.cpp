@@ -16,6 +16,16 @@ int main()
     }
     vector<int> D(N);
     // 가장 긴 증가하는 부분수열4
+    /*
+    void go(int p) {
+        // ? -> ? -> ... a[v[p]] -> a[p]
+        if (p == -1) {
+            return;
+        }
+        go(v[p]);
+        cout << a[p] << ' ';
+    }
+    */
     for (int i=0; i<N; i++) {
         D[i] = 1;
         for (int j=0; j<i; j++) {
