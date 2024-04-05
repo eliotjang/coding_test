@@ -9,7 +9,7 @@ int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-    // freopen("input.txt","r",stdin);
+    freopen("input.txt","r",stdin);
     int N;
     cin >> N;
     vector<int> A(N);
