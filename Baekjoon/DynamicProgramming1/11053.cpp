@@ -11,17 +11,15 @@ int main()
     int N;
     cin >> N;
     vector<int> A(N);
+    vector<int> D(N, 1);
     for (int i=0; i<N; i++) {
         cin >> A[i];
     }
-    vector<int> D(N);
-    // D[i] = max(D[j]) + 1
-    //  j < i, A[j] < A[i]
-    for (int i=0; i<N; i++) {
-        D[i] = 1;
+    D[0] = 1;
+    for (int i=1; i<N; i++) {
         for (int j=0; j<i; j++) {
-            if (A[j] < A[i] && D[i] < D[j]+1) {
-                D[i] = D[j] + 1;
+            if (A[j] < A[i] && D[i] < D[j] + 1) {
+                D[i]++;
             }
         }
     }
