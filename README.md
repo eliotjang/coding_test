@@ -21,7 +21,7 @@
  - [큐 (2문제)](Baekjoon/queue)
  - [덱 (1문제)](Baekjoon/deque)
  - [수학1 (14문제)](Baekjoon/math1)
- - [다이나믹 프로그래밍1 (4문제)](Baekjoon/DynamicProgramming1)
+ - [다이나믹 프로그래밍1 (13문제)](Baekjoon/DynamicProgramming1)
 - - -
 ## 공부 내용 정리(노션)  
 [백준 단계별 문제 내용 정리](https://eliotjang.notion.site/d1b78c20eb764b689969086c4eb30122?pvs=4)
