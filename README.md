@@ -1,6 +1,7 @@
-## 코딩 테스트 준비
+# 코딩 테스트 준비
 
-### 백준 단계별 문제 풀이(완)
+## 백준 온라인 저지
+### 단계별 문제 풀이
  - [입출력과 사칙연산 (13문제)](Baekjoon/coding_basic/iostream_and_arithmetic)
  - [조건문 (7문제)](Baekjoon/coding_basic/conditional_statement)
  - [반복문 (12문제)](Baekjoon/coding_basic/loop_statement)
@@ -8,8 +9,6 @@
  - [문자열 (11문제)](Baekjoon/coding_basic/string)
  - [심화 1(8문제)](Baekjoon/coding_basic/deepening_1)
  - [2차원 배열(4문제)](Baekjoon/coding_basic/two_dimensional_array)
-
-- - -
 
 ### 백준 알고리즘 기초 1/2
  - [스택 (9문제)](Baekjoon/stack)
@@ -20,4 +19,6 @@
 
 - - -
 
-### [프로그래머스 입문](Programmers/Introduction)
+## 프로그래머스
+### 프로그래머스 입문
+- [일자별 문제풀이](Programmers/Introduction)
