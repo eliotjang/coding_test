@@ -20,5 +20,6 @@
 - - -
 
 ## 프로그래머스
-### 프로그래머스 입문
-- [일자별 문제풀이](Programmers/Introduction)
+### 코딩테스트 연습
+- [코딩테스트 입문 문제풀이](Programmers/Introduction)
+- [SQL 문제풀이](Programmers/SQL)
