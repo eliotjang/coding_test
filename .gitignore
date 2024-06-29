@@ -6,7 +6,7 @@
 # Unignore all dirs
 !*/
 
-
+.vs
 .vscode/
 .yml
 *.dSYM/
