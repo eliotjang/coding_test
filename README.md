@@ -20,4 +20,4 @@
 
 ### 코딩테스트
 
-- [MySQL](Leetcode/MySQL)
+- [MySQL](LeetCode/MySQL)
