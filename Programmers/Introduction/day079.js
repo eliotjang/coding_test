@@ -1,14 +1,15 @@
 // 카펫
 function solution(brown, yellow) {
-  const answer = [];
-  carpetCount = brown + yellow;
-
-  for (let i = 3; i < Math.ceil(carpetCount / 2); i++) {
-    if (carpetCount % i === 0) {
-      const height = i - 2;
-      // const width =
+    const total = brown + yellow;
+    const answer = [];
+    for ( let i = 1 ;  i < 1415 ; i++ ) {
+        if ( yellow % i === 0 ) {
+            const y = i + 2;
+            if ( total % y === 0 && (total / y - 2) === (yellow / i) ) {
+                answer.push(total / y, y);
+                break;
+            }
+        }
     }
-  }
-
-  return answer;
+    return answer;
 }
