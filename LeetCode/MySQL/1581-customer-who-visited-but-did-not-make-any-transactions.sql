@@ -1,0 +1,7 @@
+-- 1581-customer-who-visited-but-did-not-make-any-transactions.sql
+SELECT customer_id,
+  COUNT(*) count_no_trans
+FROM Visits v
+  LEFT JOIN Transactions t ON v.visit_id = t.visit_id
+WHERE t.visit_id IS NULL
+GROUP BY customer_id
