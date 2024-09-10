@@ -12,4 +12,4 @@ int solution(int a, int b, bool flag) {
     return answer;
 }
 
-// another person's solution : use ternery operator
+// another person's solution : use ternary operator
