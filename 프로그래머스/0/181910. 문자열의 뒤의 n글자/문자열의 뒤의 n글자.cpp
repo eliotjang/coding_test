@@ -7,3 +7,5 @@ string solution(string my_string, int n) {
     answer = my_string.substr(my_string.size() - n);
     return answer;
 }
+
+// another person's solution : use string constructor & string::end
