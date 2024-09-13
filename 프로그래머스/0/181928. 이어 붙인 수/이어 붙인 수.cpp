@@ -11,3 +11,5 @@ int solution(vector<int> num_list) {
     }
     return stoi(odd) + stoi(even);
 }
+
+// another person's solution : use to_string
