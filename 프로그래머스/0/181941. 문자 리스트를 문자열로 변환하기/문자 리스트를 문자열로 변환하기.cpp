@@ -10,3 +10,5 @@ string solution(vector<string> arr) {
     }
     return answer;
 }
+
+// another person's solution : use accumulate
