@@ -12,3 +12,5 @@ string solution(string n_str) {
     answer = n_str.substr(pos);
     return answer;
 }
+
+// another person's solution : use stoi & to_string
