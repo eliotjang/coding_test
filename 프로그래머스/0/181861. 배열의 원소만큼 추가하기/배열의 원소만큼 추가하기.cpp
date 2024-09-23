@@ -1,13 +1,22 @@
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
 vector<int> solution(vector<int> arr) {
-    vector<int> answer;
-    for (int i = 0; i < arr.size(); i++) {
-        for (int j = 0; j < arr[i]; j++) {
-            answer.push_back(arr[i]);
-        }
+    int size = 0, idx = 0;
+    for (const int x : arr) {
+        size += x;
     }
+    
+    vector<int> answer(size);
+    for (const int x : arr) {
+        vector<int> t(x, x);
+        copy(t.begin(), t.end(), answer.begin() + idx);
+        idx += x;
+    }
+    
     return answer;
 }
+
+// another person's solution : use insert
