@@ -21,3 +21,5 @@ vector<string> solution(string my_string) {
     }
     return answer;
 }
+
+// another person's solution : use stringstream
