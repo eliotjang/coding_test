@@ -13,3 +13,5 @@ vector<string> solution(vector<string> strArr) {
     }
     return strArr;
 }
+
+// another person's solution : use transform
