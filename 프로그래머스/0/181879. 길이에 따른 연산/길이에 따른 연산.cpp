@@ -1,4 +1,3 @@
-#include <string>
 #include <vector>
 #include <numeric> // accumulate
 #include <functional> // plus, multiplies
