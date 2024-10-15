@@ -11,3 +11,5 @@ string solution(string myString, string pat) {
     }
     return answer;
 }
+
+// another person's solution : use rfind
