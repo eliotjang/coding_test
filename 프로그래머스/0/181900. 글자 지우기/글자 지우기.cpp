@@ -15,3 +15,5 @@ string solution(string my_string, vector<int> indices) {
     }
     return my_string;
 }
+
+// another person's solution : use greater and sort
